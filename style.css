@@ -1,0 +1,96 @@
+/* 1. Definição de cores (Identidade Fleximedical/Kure) */
+:root {
+    --primary: #0056b3;    /* Azul Institucional */
+    --secondary: #28a745;  /* Verde Sustentabilidade */
+    --bg: #f0f2f5;         /* Fundo cinza claro */
+    --text: #333;
+    --white: #ffffff;
+}
+
+/* 2. Reset básico e centralização */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 3. Estilo dos Containers (Seleção e Quiz) */
+.container, .quiz-container {
+    background: var(--white);
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* 4. Grid de botões de seleção de setor */
+.grid-botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 5. Botões de Setor e Opções do Quiz */
+button {
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid var(--primary);
+    background: var(--white);
+    color: var(--primary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Estilo específico para opções do quiz (ficar em lista) */
+.option-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* 6. Feedback de acerto/erro */
+.correct { background-color: #d4edda !important; border-color: #28a745 !important; color: #155724 !important; }
+.wrong { background-color: #f8d7da !important; border-color: #dc3545 !important; color: #721c24 !important; }
+
+/* 7. Barra de Progresso */
+#progress-bar { width: 100%; height: 10px; background: #eee; border-radius: 5px; margin: 20px 0; overflow: hidden; }
+#progress-fill { height: 100%; width: 0%; background: var(--secondary); transition: 0.5s; }
+
+/* 8. Classe Utilitária para esconder elementos */
+.hidden { display: none !important; }
+
+/* Espaçamento entre botões de resultado */
+.btn-retry, .btn-final {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn-retry {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.btn-retry:hover {
+    background-color: var(--secondary);
+}
+.grid-botoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Melhora a responsividade */
+    gap: 10px;
+}
