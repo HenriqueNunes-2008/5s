@@ -221,3 +221,15 @@ window.onclick = (event) => {
         modal.classList.add("hidden");
     }
 };
+
+// Gera o QR Code automaticamente para a URL atual do site
+window.onload = function() {
+    new QRCode(document.getElementById("qrcode"), {
+        text: window.location.href,
+        width: 128,
+        height: 128,
+        colorDark : "#0093dd", // Azul da Fleximedical
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+};
