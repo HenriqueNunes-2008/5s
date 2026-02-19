@@ -7,24 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="info-btn" class="info-icon-fixed" title="O que é 5S?">?</button>
-
     <div class="topbar">
-        </div>
-    <div class="topbar">
-        <img src="static/LogoFlexcolor2.png" class="logo-fixed" alt="Logo">
-        <div class="topbar-content">
-            <div class="header-info">
-                <div class="address">
-                    R. José Antônio Valadares, 285 – Vila Liviero<br>
-                    São Paulo – SP. CEP: 04185-020
-                </div>
-                <div class="contact">
-                    <span class="email">comercial@soukure.com.br</span><br>
-                    <span class="phone">(11) 2372-7444</span>
-                </div>
+        <button id="back-btn" class="nav-icon" onclick="window.history.back()" title="Voltar">←</button>
+        
+        <div class="topbar-center">
+            <img src="static/LogoFlexcolor2.png" class="logo-fixed" alt="Logo">
+            <div class="header-info-mobile">
+                <span>comercial@soukure.com.br</span>
+                <span>(11) 2372-7444</span>
             </div>
         </div>
+
+        <button id="info-btn" class="nav-icon" title="O que é 5S?">?</button>
     </div>
 
     <div id="modal-5s" class="modal hidden">
