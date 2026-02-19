@@ -221,3 +221,20 @@ window.onclick = (event) => {
         modal.classList.add("hidden");
     }
 };
+// NOVA FUNÇÃO PARA O BOTÃO VOLTAR
+function voltarPagina() {
+    const quizContainer = document.getElementById("quiz-container");
+    const setorSelector = document.getElementById("setor-selector");
+
+    // Se o quiz estiver aberto, apenas volta para a seleção de setores
+    if (!quizContainer.classList.contains("hidden")) {
+        quizContainer.classList.add("hidden");
+        setorSelector.classList.remove("hidden");
+        // Reseta o progresso para a próxima vez
+        currentIdx = 0;
+        score = 0;
+    } else {
+        // Se já estiver na tela inicial, usa o comportamento padrão do navegador
+        window.history.back();
+    }
+}
