@@ -51,18 +51,18 @@
         <div class="logo-placeholder">FLEXIMEDICAL | KURE</div>
     </div>
 
-    <script>
-        // Pega a URL base do site (removendo o "admin.html" do final)
-        const urlOriginal = window.location.href.replace("admin.html", "");
-        
-        new QRCode(document.getElementById("qrcode"), {
-            text: urlOriginal,
-            width: 256,
-            height: 256,
-            colorDark : "#0093dd",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
-        });
-    </script>
+  <script>
+    // Garante o link da raiz do projeto no Render
+    const urlPrincipal = window.location.origin + window.location.pathname.replace("admin.html", "");
+    
+    new QRCode(document.getElementById("qrcode"), {
+        text: urlPrincipal,
+        width: 300,
+        height: 300,
+        colorDark : "#0093dd",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });    
+</script>
 </body>
 </html>
