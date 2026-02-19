@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação Quiz 5S - Fleximedical</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0093dd; /* Azul Fleximedical */
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: #333;
+        }
+        h1 { margin-bottom: 10px; color: #0093dd; }
+        p { font-size: 1.2rem; margin-bottom: 30px; }
+        #qrcode {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .logo-placeholder {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #0093dd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Participe do Quiz 5S</h1>
+        <p>Aponte a câmera do celular para o QR Code abaixo:</p>
+        
+        <div id="qrcode"></div>
+
+        <div class="logo-placeholder">FLEXIMEDICAL | KURE</div>
+    </div>
+
+    <script>
+        // Pega a URL base do site (removendo o "admin.html" do final)
+        const urlOriginal = window.location.href.replace("admin.html", "");
+        
+        new QRCode(document.getElementById("qrcode"), {
+            text: urlOriginal,
+            width: 256,
+            height: 256,
+            colorDark : "#0093dd",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
