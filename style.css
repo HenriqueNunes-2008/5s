@@ -22,46 +22,60 @@ body {
     color: var(--text);
 }
 
-/* ================= TOPBAR ================= */
+/* ================= TOPBAR REFORMULADA ================= */
 .topbar {
     position: fixed;
-    top: 0; 
-    left: 0;
+    top: 0; left: 0;
     width: 100%;
-    height: 120px;
+    height: 110px;
     background: #ffffff;
-    z-index: 100; /* Aumentado para garantir prioridade */
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
-    border-radius: 0 0 50px 50px;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.topbar-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .logo-fixed {
-    position: absolute;
-    top: 50%;
-    left: 1%;
-    transform: translateY(-50%);
-    height: 255%;
-    pointer-events: none;
+    height: 55px; /* Tamanho realçado para a logo */
+    width: auto;
 }
 
-.topbar-content {
-    height: 100%;
+.header-info-mobile {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 60px 0 200px;
-}
-
-.header-info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 32px;
-    font-size: 14px;
-    margin-right: 5%;
+    flex-direction: column;
+    font-size: 11px;
     color: var(--primary);
-    line-height: 1.4;
-    position: relative;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Ícones de Navegação (Seta e ?) */
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    color: white !important;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    flex-shrink: 0;
 }
 
 /* ================= ÍCONE DE INFORMAÇÃO (?) ================= */
