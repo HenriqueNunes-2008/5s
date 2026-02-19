@@ -51,10 +51,14 @@
         <div class="logo-placeholder">FLEXIMEDICAL | KURE</div>
     </div>
 
-  <script>
-    // Garante o link da raiz do projeto no Render
-    const urlPrincipal = window.location.origin + window.location.pathname.replace("admin.html", "");
+<script>
+    // Esta linha pega apenas o domínio (ex: https://seu-site.onrender.com/)
+    // Independentemente de onde você abrir o admin.html
+    const urlPrincipal = window.location.origin + "/";
     
+    // Limpa o conteúdo anterior para não duplicar se você atualizar
+    document.getElementById("qrcode").innerHTML = "";
+
     new QRCode(document.getElementById("qrcode"), {
         text: urlPrincipal,
         width: 300,
@@ -62,7 +66,10 @@
         colorDark : "#0093dd",
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
-    });    
+    });
+    
+    // Mostra no console do navegador qual link ele gerou (aperte F12 para ver)
+    console.log("Link gerado no QR Code:", urlPrincipal);
 </script>
 </body>
 </html>
