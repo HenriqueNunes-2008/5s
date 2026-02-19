@@ -221,32 +221,34 @@ button:hover {
 /* ================= UTILITÁRIOS ================= */
 .hidden { display: none !important; }
 
-/* ================= RESPONSIVIDADE TOTAL ================= */
+/* ================= RESPONSIVIDADE (AJUSTADA) ================= */
 
 @media (max-width: 768px) {
     body {
-        padding-top: 180px; /* Espaço para a nova topbar vertical */
+        padding-top: 150px; /* Dá espaço para a topbar maior no celular */
         background: linear-gradient(180deg, #0093dd 0%, #5b2fa6 100%);
-        align-items: flex-start; /* Começa do topo para não sumir conteúdo */
-        overflow-x: hidden;
-    }
-
-    /* TOPBAR VERTICAL */
-    .topbar {
-        height: auto;
-        padding: 15px 10px;
-        border-radius: 0 0 30px 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+    }
+
+    /* Ajuste da Topbar para empilhar conteúdo */
+    .topbar {
+        height: auto; 
+        padding: 15px 0;
+        border-radius: 0 0 35px 35px;
     }
 
     .logo-fixed {
-        position: static; /* Remove a posição absoluta que encolhe a logo */
+        position: relative; /* Sai do modo 'flutuante' no celular */
         transform: none;
-        height: 50px; /* Logo agora fica visível e centralizada */
-        width: auto;
+        left: 0;
+        top: 0;
+        height: 60px; /* Tamanho visível da logo */
+        margin-bottom: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .topbar-content {
@@ -256,51 +258,37 @@ button:hover {
     }
 
     .header-info {
-        flex-direction: column;
-        gap: 2px;
+        flex-direction: column; /* Telefone e e-mail um embaixo do outro */
+        gap: 5px;
         text-align: center;
         margin-right: 0;
-        font-size: 12px;
+        font-size: 13px;
     }
 
-    .address { display: none; } /* Remove texto longo no mobile */
+    .address { display: none; } /* Remove o endereço longo para limpar o visual */
 
-    /* CONTAINERS COM MARGEM LATERAL */
-    .container, .quiz-container {
-        width: 88%; /* Aqui está o respiro lateral que você pediu */
-        max-width: 88%;
-        padding: 20px;
-        margin: 0 auto 20px auto; /* Centraliza e dá margem embaixo */
-        box-sizing: border-box;
-    }
-
-    .grid-botoes {
-        grid-template-columns: 1fr 1fr; /* Dois botões por linha */
-        gap: 8px;
-    }
-
-    /* AJUSTE DO BOTÃO FLUTUANTE */
+    /* Ajuste do Botão de Interrogação (?) */
     .info-icon-fixed {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        top: auto; /* Tira do topo para não cobrir a topbar */
-        bottom: 20px;
-        right: 20px;
-        opacity: 0.9;
+        top: 15px;      /* Move para o topo */
+        right: 15px;    /* Canto superior direito */
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        background-color: #0093dd;
+        border: 2px solid white;
+        z-index: 10001; /* Garante que fique acima da topbar branca */
     }
 
-    h3 { font-size: 1rem; margin-bottom: 15px; }
-    
-    button {
-        padding: 10px 5px;
-        font-size: 0.85rem;
+    /* Containers com margem lateral para não colar na tela */
+    .container, .quiz-container {
+        width: 85%; 
+        max-width: 85%;
+        margin: 0 auto 20px auto;
+        padding: 20px;
     }
-}
 
-/* Ajuste para telas muito finas */
-@media (max-width: 360px) {
     .grid-botoes {
-        grid-template-columns: 1fr; /* Um botão por linha se for muito pequeno */
+        grid-template-columns: 1fr 1fr; /* Mantém 2 colunas organizadas */
+        gap: 12px;
     }
 }
