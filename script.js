@@ -221,22 +221,3 @@ window.onclick = (event) => {
         modal.classList.add("hidden");
     }
 };
-
-// Gera o QR Code automaticamente para a URL BASE do site
-window.addEventListener('load', function() {
-    const qrcodeContainer = document.getElementById("qrcode");
-    if (qrcodeContainer) {
-        // Pega a URL atual e garante que termine com / para evitar 404
-        let urlBase = window.location.origin + window.location.pathname;
-        urlBase = urlBase.replace("admin.html", "").replace("index.html", "");
-        
-        new QRCode(qrcodeContainer, {
-            text: urlBase,
-            width: 128,
-            height: 128,
-            colorDark : "#000000", 
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
-        });
-    }
-});
