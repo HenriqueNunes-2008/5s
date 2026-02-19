@@ -159,7 +159,9 @@ async function enviarParaPlanilha() {
     }
 
     const porcentagemCalc = ((score / perguntasAtuais.length) * 100).toFixed(2);
-    const listaErros = errosCapturados.length > 0 ? errosCapturados.join(" | ") : "Nenhum erro";
+   const listaErros = errosCapturados.length > 0 
+        ? errosCapturados.map(q => `[${setorSelecionado}] ${q}`).join(" | ") 
+        : "Nenhum erro";
 
     const payload = {
         email: emailUser,
