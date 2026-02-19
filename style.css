@@ -221,56 +221,69 @@ button:hover {
 /* ================= UTILITÁRIOS ================= */
 .hidden { display: none !important; }
 
-/* ================= RESPONSIVIDADE ================= */
-@media (max-width: 1240px) {
-    .topbar { height: 100px; border-radius: 0 0 32px 32px; }
-    .logo-fixed { height: 200%; left: 16px; }
-    .header-info { font-size: 12px; gap: 16px; }
-    .address { display: none; } 
-    .topbar-content { padding: 0 24px 0 140px; }
-    body { padding-top: 110px; }
-    .info-icon { width: 30px; height: 30px; font-size: 18px; }
+/* ================= RESPONSIVIDADE (CELULAR E TABLET) ================= */
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 160px; /* Aumentado para acomodar a topbar vertical */
+        align-items: flex-start; /* Alinha o quiz ao topo em telas pequenas */
+        padding-bottom: 20px;
+        background: linear-gradient(180deg, #0093dd 0%, #5b2fa6 100%); /* Gradiente vertical fica melhor no celular */
+    }
+
+    .topbar {
+        height: auto; /* Altura automática para empilhar conteúdo */
+        padding: 15px 0;
+        border-radius: 0 0 25px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-fixed {
+        position: relative;
+        transform: none;
+        left: 0;
+        top: 0;
+        height: 60px; /* Logo menor no celular */
+        margin-bottom: 10px;
+    }
+
+    .topbar-content {
+        padding: 0 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .header-info {
+        flex-direction: column; /* Empilha endereço e contato */
+        gap: 5px;
+        text-align: center;
+        margin-right: 0;
+        font-size: 11px;
+    }
+
+    .address {
+        display: none; /* Esconde endereço longo no celular para ganhar espaço */
+    }
+
+    .container, .quiz-container {
+        width: 85%; /* Garante margem nas laterais */
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .grid-botoes {
+        grid-template-columns: 1fr 1fr; /* Duas colunas de botões no celular */
+        gap: 10px;
+    }
+
+    h3 { font-size: 1.1rem; }
 }
 
-/* Botão Flutuante de Ajuda */
-.info-icon-fixed {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #0093dd; /* Azul Fleximedical */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 10001; /* Fica acima de tudo, inclusive da topbar */
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.info-icon-fixed:hover {
-    background-color: #1e3a8a; /* Azul Escuro */
-    transform: scale(1.1) rotate(10deg);
-}
-
-/* Modal acima do botão flutuante */
-.modal {
-    z-index: 10002;
-}
-
-/* Ajuste para não sobrepor o conteúdo em telas muito pequenas */
-@media (max-width: 600px) {
-    .info-icon-fixed {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        top: 10px;
-        right: 10px;
+/* Ajuste para telas muito pequenas (iPhone SE, etc) */
+@media (max-width: 380px) {
+    .grid-botoes {
+        grid-template-columns: 1fr; /* Uma coluna só se a tela for muito estreita */
     }
 }
