@@ -221,69 +221,86 @@ button:hover {
 /* ================= UTILITÁRIOS ================= */
 .hidden { display: none !important; }
 
-/* ================= RESPONSIVIDADE (CELULAR E TABLET) ================= */
+/* ================= RESPONSIVIDADE TOTAL ================= */
 
 @media (max-width: 768px) {
     body {
-        padding-top: 160px; /* Aumentado para acomodar a topbar vertical */
-        align-items: flex-start; /* Alinha o quiz ao topo em telas pequenas */
-        padding-bottom: 20px;
-        background: linear-gradient(180deg, #0093dd 0%, #5b2fa6 100%); /* Gradiente vertical fica melhor no celular */
+        padding-top: 180px; /* Espaço para a nova topbar vertical */
+        background: linear-gradient(180deg, #0093dd 0%, #5b2fa6 100%);
+        align-items: flex-start; /* Começa do topo para não sumir conteúdo */
+        overflow-x: hidden;
     }
 
+    /* TOPBAR VERTICAL */
     .topbar {
-        height: auto; /* Altura automática para empilhar conteúdo */
-        padding: 15px 0;
-        border-radius: 0 0 25px 25px;
+        height: auto;
+        padding: 15px 10px;
+        border-radius: 0 0 30px 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
 
     .logo-fixed {
-        position: relative;
+        position: static; /* Remove a posição absoluta que encolhe a logo */
         transform: none;
-        left: 0;
-        top: 0;
-        height: 60px; /* Logo menor no celular */
-        margin-bottom: 10px;
+        height: 50px; /* Logo agora fica visível e centralizada */
+        width: auto;
     }
 
     .topbar-content {
-        padding: 0 15px;
+        padding: 0;
         justify-content: center;
         width: 100%;
     }
 
     .header-info {
-        flex-direction: column; /* Empilha endereço e contato */
-        gap: 5px;
+        flex-direction: column;
+        gap: 2px;
         text-align: center;
         margin-right: 0;
-        font-size: 11px;
+        font-size: 12px;
     }
 
-    .address {
-        display: none; /* Esconde endereço longo no celular para ganhar espaço */
-    }
+    .address { display: none; } /* Remove texto longo no mobile */
 
+    /* CONTAINERS COM MARGEM LATERAL */
     .container, .quiz-container {
-        width: 85%; /* Garante margem nas laterais */
+        width: 88%; /* Aqui está o respiro lateral que você pediu */
+        max-width: 88%;
         padding: 20px;
-        margin: 0 auto;
+        margin: 0 auto 20px auto; /* Centraliza e dá margem embaixo */
+        box-sizing: border-box;
     }
 
     .grid-botoes {
-        grid-template-columns: 1fr 1fr; /* Duas colunas de botões no celular */
-        gap: 10px;
+        grid-template-columns: 1fr 1fr; /* Dois botões por linha */
+        gap: 8px;
     }
 
-    h3 { font-size: 1.1rem; }
+    /* AJUSTE DO BOTÃO FLUTUANTE */
+    .info-icon-fixed {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        top: auto; /* Tira do topo para não cobrir a topbar */
+        bottom: 20px;
+        right: 20px;
+        opacity: 0.9;
+    }
+
+    h3 { font-size: 1rem; margin-bottom: 15px; }
+    
+    button {
+        padding: 10px 5px;
+        font-size: 0.85rem;
+    }
 }
 
-/* Ajuste para telas muito pequenas (iPhone SE, etc) */
-@media (max-width: 380px) {
+/* Ajuste para telas muito finas */
+@media (max-width: 360px) {
     .grid-botoes {
-        grid-template-columns: 1fr; /* Uma coluna só se a tela for muito estreita */
+        grid-template-columns: 1fr; /* Um botão por linha se for muito pequeno */
     }
 }
