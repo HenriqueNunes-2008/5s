@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 130px; /* Espaço para a Topbar fixa */
+    padding-top: 130px; /* EspaÃ§o para a Topbar fixa */
     color: var(--text);
 }
 
@@ -47,8 +47,10 @@ body {
 }
 
 .logo-fixed {
-    height: 55px; /* Tamanho realçado para a logo */
+    height: 55px;
     width: auto;
+    transform: scale(1.95);
+    transform-origin: center center;
 }
 
 .header-info-mobile {
@@ -60,7 +62,7 @@ body {
     text-align: center;
 }
 
-/* Ícones de Navegação (Seta e ?) */
+/* Ãcones de NavegaÃ§Ã£o (Seta e ?) */
 .nav-icon {
     width: 40px;
     height: 40px;
@@ -78,7 +80,7 @@ body {
     flex-shrink: 0;
 }
 
-/* ================= ÍCONE DE INFORMAÇÃO (?) ================= */
+/* ================= ÃCONE DE INFORMAÃ‡ÃƒO (?) ================= */
 .info-icon {
     background: var(--accent);
     color: white;
@@ -105,7 +107,7 @@ body {
 /* ================= MODAL (POP-UP 5S) ================= */
 .modal {
     position: fixed;
-    z-index: 200; /* Sempre à frente da Topbar */
+    z-index: 200; /* Sempre Ã  frente da Topbar */
     left: 0;
     top: 0;
     width: 100%;
@@ -188,7 +190,7 @@ body {
     margin-top: 20px;
 }
 
-/* ================= BOTÕES DO QUIZ ================= */
+/* ================= BOTÃ•ES DO QUIZ ================= */
 button {
     padding: 12px;
     font-size: 0.95rem;
@@ -232,21 +234,21 @@ button:hover {
     transition: 0.4s; 
 }
 
-/* ================= UTILITÁRIOS ================= */
+/* ================= UTILITÃRIOS ================= */
 .hidden { display: none !important; }
 
 /* ================= RESPONSIVIDADE (AJUSTADA) ================= */
 
 @media (max-width: 768px) {
     body {
-        padding-top: 150px; /* Dá espaço para a topbar maior no celular */
+        padding-top: 150px; /* DÃ¡ espaÃ§o para a topbar maior no celular */
         background: linear-gradient(180deg, #0093dd 0%, #5b2fa6 100%);
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Ajuste da Topbar para empilhar conteúdo */
+    /* Ajuste da Topbar para empilhar conteÃºdo */
     .topbar {
         height: auto; 
         padding: 15px 0;
@@ -255,10 +257,11 @@ button:hover {
 
     .logo-fixed {
         position: relative; /* Sai do modo 'flutuante' no celular */
-        transform: none;
+        transform: scale(1.9);
+        transform-origin: center center;
         left: 0;
         top: 0;
-        height: 60px; /* Tamanho visível da logo */
+        height: 60px;
         margin-bottom: 5px;
         display: block;
         margin-left: auto;
@@ -279,9 +282,9 @@ button:hover {
         font-size: 13px;
     }
 
-    .address { display: none; } /* Remove o endereço longo para limpar o visual */
+    .address { display: none; } /* Remove o endereÃ§o longo para limpar o visual */
 
-    /* Ajuste do Botão de Interrogação (?) */
+    /* Ajuste do BotÃ£o de InterrogaÃ§Ã£o (?) */
     .info-icon-fixed {
         top: 15px;      /* Move para o topo */
         right: 15px;    /* Canto superior direito */
@@ -293,7 +296,7 @@ button:hover {
         z-index: 10001; /* Garante que fique acima da topbar branca */
     }
 
-    /* Containers com margem lateral para não colar na tela */
+    /* Containers com margem lateral para nÃ£o colar na tela */
     .container, .quiz-container {
         width: 85%; 
         max-width: 85%;
@@ -302,7 +305,8 @@ button:hover {
     }
 
     .grid-botoes {
-        grid-template-columns: 1fr 1fr; /* Mantém 2 colunas organizadas */
+        grid-template-columns: 1fr 1fr; /* MantÃ©m 2 colunas organizadas */
         gap: 12px;
     }
 }
+
