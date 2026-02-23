@@ -10,11 +10,11 @@ const quizData = {
         { q: "Manter o posto de trabalho em containers limpo, mesmo em reformas pesadas, é:", options: ["Impossível", "Responsabilidade da limpeza", "Senso de Disciplina", "Perda de tempo"], answer: 2 }
     ],
     almoxarifado: [
-        { q: "O controle de EPIs é feito no Sankhya. Manter o sistema atualizado evita desperdício de qual 'S'?", options: ["Seiri", "Seiso", "Seiton", "Nenhum"], answer: 0 },
+        { q: "O controle de materiais é feito no Sankhya. Manter o sistema atualizado evita desperdício de qual 'S'?", options: ["Seiri", "Seiso", "Seiton", "Nenhum"], answer: 0 },
         { q: "Com pouco espaço físico, qual a melhor estratégia de Seiton (Organização)?", options: ["Empilhar tudo", "Identificar locais e usar verticalização", "Deixar no chão", "Não organizar"], answer: 1 },
         { q: "Um item novo chegou e não tem lugar definido. O que deve ser feito imediatamente?", options: ["Criar um endereçamento padronizado", "Deixar na entrada", "Colocar em cima de outro item", "Esperar o inventário"], answer: 0 },
         { q: "O 5S foi implementado no setor de almoxarifado. Para manter o resultado, precisamos de:", options: ["Nova reforma", "Shitsuke", "Mais espaço", "Trocar o sistema"], answer: 1 },
-        { q: "Itens obsoletos de projetos antigos ocupando prateleiras devem ser:", options: ["Mantidos lá", "Doados/Descartados (Seiri)", "Escondidos", "Pintados"], answer: 1 }
+        { q: "Itens obsoletos de projetos antigos ocupando prateleiras devem ser:", options: ["Mantidos lá", "Doados/Descartados", "Escondidos", "Pintados"], answer: 1 }
     ],
     compras: [
         { q: "Para garantir que a Fábrica receba o insumo no prazo, o pedido de compra no Sankhya deve ser:", options: ["Feito de qualquer jeito", "Padronizado e detalhado", "Apenas por telefone", "Esquecido no rascunho"], answer: 1 },
@@ -26,7 +26,7 @@ const quizData = {
     comercial: [
         { q: "Informações claras e sem erros para o cliente no CRM evitam retrabalho. Qual 'S'?", options: ["Seiketsu", "Seiso", "Seiri", "Nenhum"], answer: 0 },
         { q: "A confiança do cliente é mantida com processos organizados e transparentes. Isso reflete:", options: ["Shitsuke", "Seiton", "Seiri", "Seiso"], answer: 0 },
-        { q: "Contratos e propostas em rascunho espalhados pela mesa de trabalho ferem o:", options: ["Seiton", "Seiri", "Seiso", "Nenhuma"], answer: 1 },
+        { q: "Um cliente pede uma proposta urgente. Para garantir agilidade, como os orçamentos devem estar no servidor?", options: ["Salvos na área de trabalho individual para acesso rápido", "Padronizados por nome e data em pastas compartilhadas", "Armazenados sem critério, usando apenas a busca do Windows",  "Apenas em formato impresso para evitar erros digitais"],  answer: 1},
         { q: "Manter a base de leads atualizada, removendo quem não tem interesse, foca no senso de:", options: ["Seiri", "Seiso", "Seiton", "Shitsuke"], answer: 0 },
         { q: "A clareza nas informações passadas ao cliente sobre a unidade móvel foca em:", options: ["Seiketsu", "Seiso", "Seiri", "Nenhum"], answer: 0 }
     ],
