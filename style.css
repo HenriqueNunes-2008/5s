@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 130px; /* EspaÃ§o para a Topbar fixa */
+    padding-top: 130px; /* Espaço para a Topbar fixa */
     color: var(--text);
 }
 
@@ -49,20 +49,21 @@ body {
 .logo-fixed {
     height: 55px;
     width: auto;
-    transform: scale(1.95);
+    transform: scale(2.55);
     transform-origin: center center;
 }
 
 .header-info-mobile {
     display: flex;
     flex-direction: column;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--primary);
     margin-top: 5px;
+    margin-right: 22px;
     text-align: center;
 }
 
-/* Ãcones de NavegaÃ§Ã£o (Seta e ?) */
+/* Ícones de Navegação (Seta e ?) */
 .nav-icon {
     width: 40px;
     height: 40px;
@@ -78,9 +79,10 @@ body {
     justify-content: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     flex-shrink: 0;
+    margin-left: 2%;
 }
 
-/* ================= ÃCONE DE INFORMAÃ‡ÃƒO (?) ================= */
+/* ================= ÍCONE DE INFORMAÇÃO (?) ================= */
 .info-icon {
     background: var(--accent);
     color: white;
@@ -107,7 +109,7 @@ body {
 /* ================= MODAL (POP-UP 5S) ================= */
 .modal {
     position: fixed;
-    z-index: 200; /* Sempre Ã  frente da Topbar */
+    z-index: 200; /* Sempre na frente da Topbar */
     left: 0;
     top: 0;
     width: 100%;
@@ -123,8 +125,8 @@ body {
     background-color: white;
     padding: 30px;
     border-radius: 20px;
-    width: 90%;
-    max-width: 550px;
+    width: 80%;
+    max-width: 400px;
     position: relative;
     box-shadow: 0 10px 40px rgba(0,0,0,0.4);
     animation: slideDown 0.4s ease-out;
@@ -234,21 +236,21 @@ button:hover {
     transition: 0.4s; 
 }
 
-/* ================= UTILITÃRIOS ================= */
+/* ================= UTILITÁRIOS ================= */
 .hidden { display: none !important; }
 
 /* ================= RESPONSIVIDADE (AJUSTADA) ================= */
 
 @media (max-width: 768px) {
     body {
-        padding-top: 150px; /* DÃ¡ espaÃ§o para a topbar maior no celular */
+        padding-top: 150px; /* Dar espaço para a topbar maior no celular */
         background: linear-gradient(180deg, #0093dd 0%, #5b2fa6 100%);
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Ajuste da Topbar para empilhar conteÃºdo */
+    /* Ajuste da Topbar para empilhar conteúdo */
     .topbar {
         height: auto; 
         padding: 15px 0;
@@ -282,9 +284,9 @@ button:hover {
         font-size: 13px;
     }
 
-    .address { display: none; } /* Remove o endereÃ§o longo para limpar o visual */
+    .address { display: none; } /* Remove o endereço longo para limpar o visual */
 
-    /* Ajuste do BotÃ£o de InterrogaÃ§Ã£o (?) */
+    /* Ajuste do Botão de Interrogação (?) */
     .info-icon-fixed {
         top: 15px;      /* Move para o topo */
         right: 15px;    /* Canto superior direito */
@@ -296,7 +298,7 @@ button:hover {
         z-index: 10001; /* Garante que fique acima da topbar branca */
     }
 
-    /* Containers com margem lateral para nÃ£o colar na tela */
+    /* Containers com margem lateral para não colar na tela */
     .container, .quiz-container {
         width: 85%; 
         max-width: 85%;
@@ -305,7 +307,7 @@ button:hover {
     }
 
     .grid-botoes {
-        grid-template-columns: 1fr 1fr; /* MantÃ©m 2 colunas organizadas */
+        grid-template-columns: 1fr 1fr; /* Mantém 2 colunas organizadas */
         gap: 12px;
     }
 }
